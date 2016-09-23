@@ -31,4 +31,4 @@ After clicking the "CREATE" button, the sensor will be displayed:
 
 ![screen shot 2016-09-23 at 9 59 33 am](https://cloud.githubusercontent.com/assets/57994/18778723/09144cb6-8176-11e6-87b6-9a291fc4a8ea.png)
 
-Now you have a sensor set up and ready to receive measurements.
+Congratulations, you have a sensor set up and you can start posting measurements to senio.io.
