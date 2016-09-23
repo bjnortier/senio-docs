@@ -1,6 +1,6 @@
 # CREATE A SENSOR
 
-As a user, the first step is to create a new sensor on senio.imeao. Your sensors are shown by clicking "Sensors" on the navigation bar.
+As a new user, the first step is to create a new sensor on senio.io. Your sensors are shown by clicking "Sensors" on the navigation bar.
 
 Click on "CREATE NEW SENSOR":
 
