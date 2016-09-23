@@ -1,0 +1,72 @@
+# Post a scalar measurement
+
+When you have defined your sensor, measurements have to be POSTed using HTTP to:
+
+```
+https://www.senio.io/publish/<sensor_name>
+```
+
+Where <sensor_name> is replaced with the name of your sensor, in our exmaple it would be:
+
+```
+https://www.senio.io/publish/rpi
+```
+
+Scalar measurements are posted as JSON (and images as multipart form data, but they can be combined).
+
+Assuming you have a sensor set up as previously described, you can post some dummy data first using the "post_dummy_dht22.py" script:
+
+```
+$ ./post_dummy_dht22.py
+----- CONFIG -----
+url: https://www.senio.io/publish/rpi
+key: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+-------------------
+Temp: 22.0 Humidity: 50.0
+Status: 201
+Content:     b'{"timestamp":1474383378795.2,"data":{"temp":22,"humidity":50},"tags":null}'
+```
+
+Now let's look at the python code:
+
+```python
+#!/usr/bin/env python3
+
+import time
+import requests
+import sys
+
+from senio_config import SenioConfig
+config = SenioConfig()
+
+humidity, temp = 50.0, 22.0
+print('Temp: {} Humidity: {}'.format(temp, humidity))
+
+try:
+    response = requests.post(
+        config.url,
+        headers={
+            'Authorization': 'Bearer {}'.format(config.key)
+        },
+        json={
+            'timestamp': time.time()*1000,
+            'data': {
+                'temp': temp,
+                'humidity': humidity
+            }
+        })
+    print('Status: {}'.format(response.status_code))
+    print('Content: {}'.format(response.content))
+except:
+    print('Unexpected error:', sys.exc_info()[0])
+```
+
+There is some boilerplate and debug statements, but the important statement is **requests.post**. 
+
+Note the following:
+
+- The URL contains the name of the sensor.
+- The "Authorization" header contains "Bearer " + the device key of the sensor.
+- If the "Authorization" header is not correctly formatted or the device key is wrong, the server will response with a 403 status code.
+- The data is JSON-encoded.
+- The timestamp is in **milliseconds**. Python's time.time() will return a value in microseconds so we multiply with 1000
