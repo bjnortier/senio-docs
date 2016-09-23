@@ -8,6 +8,8 @@ Click on "CREATE NEW SENSOR":
 
 The "CREATE NEW SENSORS" dialog is displayed:
 
+![CREATE SENSOR DIALOG](https://cloud.githubusercontent.com/assets/57994/18778497/daf0cf40-8174-11e6-95c2-ccb531377cec.png)
+
 Using this dialog you will name your sensor and add new measurement fields.
 
 We will create a sensor that has 2 "scalar" measurements (temperature and humidity), and one "image" field (cam1). More types of fields (like boolean values and map coordinates) are in the pipeline.
@@ -18,7 +20,11 @@ Scalar measurements can also have a "Unit", which will makes the graphs more und
 
 A Raspberry Pi with a DHT22 (temperature & humidity) sensor and a camera can be defined as follows:
 
+![RPI WITH FIELDS](https://cloud.githubusercontent.com/assets/57994/18778505/e9585936-8174-11e6-95ac-c07854ada418.png)
+
+
 After clicking the "CREATE" button, the sensor will be displayed:
 
+![screen shot 2016-09-23 at 9 59 33 am](https://cloud.githubusercontent.com/assets/57994/18778515/011d3ec4-8175-11e6-9432-a47199d9a57d.png)
 
 *NOTE:* The "Device key" will be used from your device to authorize the measurement being posted to your account:
