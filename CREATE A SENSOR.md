@@ -4,7 +4,7 @@ As a user, the first step is to create a new sensor on senio.io. Your sensors ar
 
 Click on "CREATE NEW SENSOR":
 
-![EMPTY SENSORS](https://cloud.githubusercontent.com/assets/57994/18778448/99dc1b0e-8174-11e6-894a-e6750abb7b56.png
+![EMPTY SENSORS](https://cloud.githubusercontent.com/assets/57994/18778448/99dc1b0e-8174-11e6-894a-e6750abb7b56.png)
 
 The "CREATE NEW SENSORS" dialog is displayed:
 
