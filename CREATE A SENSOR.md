@@ -27,7 +27,7 @@ After clicking the "CREATE" button, the sensor will be displayed:
 
 ![screen shot 2016-09-23 at 9 59 33 am](https://cloud.githubusercontent.com/assets/57994/18778515/011d3ec4-8175-11e6-9432-a47199d9a57d.png)
 
-*NOTE:* The "Device key" will be used from your device to authorize the measurement being posted to your account:
+*NOTE:* The "Device key" will be used from your device to authorize the measurement(s) being posted by your sensor to your account:
 
 ![screen shot 2016-09-23 at 9 59 33 am](https://cloud.githubusercontent.com/assets/57994/18778723/09144cb6-8176-11e6-87b6-9a291fc4a8ea.png)
 
